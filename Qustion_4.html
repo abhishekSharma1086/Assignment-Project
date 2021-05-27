@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function valid(){
+            var name = document.forms["myForm"]["firstname"].value;
+            var box = document.forms["myForm"]["checkme"].value;
+            if(name == "" || name == null){
+               alert("Fill the box");
+               return false;
+            }else if(box != "on"){
+                alert("Fill the box");
+               return false;
+            }
+        }
+    </script>   
+</head>
+<body>
+    <form name="myForm" onsubmit="return valid()">
+        Name:<input type="text" name="firstname" />
+        checkme:<input type="checkbox" name="checkme" />
+        <input type="submit" value="submit" />
+    </form>
+     
+</body>
+</html>
